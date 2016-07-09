@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
-  <meta name="description" content="Repository of my opinions and projects.
-">
+  <title>Project: YU Shuttle</title>
+  <meta name="description" content="York University, Canada’s third largest university has a shuttle service for it’s students at Keele Campus.Students can ride the shuttle to residences nearby...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://aamirsahmad.github.io/about/">
+  <link rel="canonical" href="http://aamirsahmad.github.io/blog/2015/11/25/yushuttle/">
   <link rel="alternate" type="application/rss+xml" title="Aamir Ahmad" href="http://aamirsahmad.github.io/feed.xml">
 </head>
 
@@ -59,29 +58,56 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title" itemprop="name headline">Project: YU Shuttle</h1>
+    <p class="post-meta"><time datetime="2015-11-25T21:15:09-05:00" itemprop="datePublished">Nov 25, 2015</time></p>
   </header>
 
-  <div class="post-content">
-    <p>Hi, I’m Aamir !</p>
+  <div class="post-content" itemprop="articleBody">
+    <p>York University, Canada’s third largest university has a shuttle service for it’s students at Keele Campus.
+Students can ride the shuttle to residences nearby, GOTrain Station, other university campuses for free. 
+All the shuttles have a fixed schedule for all their stops and all the drivers are very punctual so it is
+very rare that it gets late.</p>
 
-<p>I’m a Computer Science student at <a href="http://lassonde.yorku.ca/">Lassonde School of Engineering</a> – <a href="http://www.yorku.ca/index.html">York University</a>.</p>
+<h3 id="problem">Problem</h3>
+<p>I was a regular user of Transit App to track TTC buses before moving to campus. Since I moved to campus 
+I started using the shuttle however it was a pain in the ass to track it’s schedule. I would often miss the shuttle
+by a few minutes and the next one would depart in half an hour or more. It was all a waste of time.</p>
 
-<p>I’ve worked with several different languages and platforms so far including: HTML5, CSS, JavaScript, WordPress, Drupal, Joomla, Ghost, Magento and Opencart. I am still going through the learning process at school and home. Now a days I am learning Node.JS and Java.</p>
+<p>After some digging I found the shuttle schedule on the university’s website. This website is not mobile 
+friendly, difficult to use and hardly interactive. Not only that, the website becomes unresponsive on smartphones.</p>
 
-<p>I work as a freeelance web developer. When I’m not trying to develop great things or studying, I’m attempting to take great photos, playing video games and listening to EDM. (ﾉ◕ヮ◕)ﾉ</p>
+<p>It was hell.</p>
 
-<p>Feel free to contact me. If you’re inclined, you can drop me an <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#097;&#097;&#109;&#105;&#114;&#115;&#097;&#064;&#109;&#121;&#046;&#121;&#111;&#114;&#107;&#117;&#046;&#099;&#097;">email</a>, follow me on <a href="https://twitter.com/entirix">Twitter</a>, circle me on <a href="https://plus.google.com/+AamirAhmads">Google+</a>, and code with me on <a href="https://github.com/aamirsahmad">GitHub</a>.</p>
+<h3 id="solution">Solution</h3>
+<p>The idea was simple - create a webapp that shows how much time is left untill the next shuttle’s departure and when.
+However the implemetation was challenging because of serveral reasons:</p>
 
-<h4 id="languages-and-softwares">Languages and Softwares</h4>
-<p><code class="highlighter-rouge">Java</code>   <code class="highlighter-rouge">JavaScript</code>   <code class="highlighter-rouge">Android</code>   <code class="highlighter-rouge">NodeJS</code></p>
+<ol>
+  <li>Irregular and inconsistent gaps between departures from university</li>
+  <li>Diffrent schedules for shuttles and days (weekdays and weekends)</li>
+</ol>
 
-<p><code class="highlighter-rouge">MongoDB</code>   <code class="highlighter-rouge">Python</code>   <code class="highlighter-rouge">PHP</code>   <code class="highlighter-rouge">MySQL</code></p>
+<p>Using the schedule from the website I created a function with different cases for times in plain JavaScript that would
+run client-side. By using a recursive pattern I was able to solve the problem in a precise manner. I used a simple
+HTML5 responsive boiler plate to show the calculations.</p>
 
-<p><code class="highlighter-rouge">HTML</code>   <code class="highlighter-rouge">CSS</code>   <code class="highlighter-rouge">Git</code>   <code class="highlighter-rouge">Gradle</code></p>
+<h3 id="future">Future</h3>
+<p>Soon dozens of people started using my app and it gained popularity within a few weeks. I presented this app at
+YU HackFest as well where it recieved high praise.</p>
+
+<p>Right now the app shows schedule only for Village (nearby student residences) but I am planning to scale my app
+to cover all the shuttles.</p>
+
+<h3 id="contributing">Contributing</h3>
+<p>If you’re interested, please fork the repository, make changes and submit pull request.</p>
+
+<p><a href="https://github.com/aamirsahmad"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path></svg>
+</span><span class="username">aamirsahmad</span></a>
+ /
+<a href="https://github.com/aamirsahmad/yorku-shuttle-webapp">yorku-shuttle-webapp</a></p>
 
   </div>
 
